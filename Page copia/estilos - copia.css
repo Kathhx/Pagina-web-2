@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+
+/*ESTILOS BARRA DE NAVEGACION*/
+nav{
+    position: fixed; /*para que quede fijo*/
+    width: 100%; /*ancho*/
+    background-color: black; /*color de fondo*/
+    display: flex; /**/
+    flex-direction: row; /*Como se alinean los elementos=una linea fija*/
+    justify-content: center; /*Alinea los elementos a lo largo del eje horizontal*/
+    align-items: center; /*Alinea los elementoss a lo largo del eje vertical*/
+    padding: 1vw 8vw; 
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.15);
+    font-family: "Agency FB";
+}
+nav img{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    margin-top: 10px;
+    padding: 0 20px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color:#e55b4f;
+    text-decoration: underline;
+}
+
+
+#home{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    padding: 200px 50px;
+    display: flex;
+    flex-direction:row;
+    padding: 15vw 8vw;
+}
+
+#home .nombre{
+    color: red;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+#home h1{
+    color: #fff;
+    font-size: 100px;
+    letter-spacing: 1.5px;
+    font-family: Cooper Black;
+}
+
+#home p{
+    width: 100%;
+    color: grey;
+    font-size: 1.1rem;
+    line-height: 30px;
+    /*border: 10px wheat solid;*/
+}
+
+#home .boton{
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+#home .boton a{
+    background-color:red;
+    padding: 15px 40px;
+    color: #fff;
+    border:none;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+#home .boton a:hover{
+    opacity: 0.8;
+}
+
+#home img{
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+    /*border: 10px wheat solid;*/
+
+}
+
+#caracteristicas{
+    padding: 5% 8% 0 8%;
+    text-align: center;
+    background-color: rgb(217, 236, 239);
+}
+
+#caracteristicas .fea-base{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 1rem;
+    margin-top: 0;
+    height: 140px;
+}
+
+#caracteristicas .fea-base .fea-box{
+    background-color: rgb(0, 0, 0);
+    text-align: start;
+    padding: 30px;
+    text-align: center;
+}
+
+#caracteristicas .fea-box i{
+    font-size: 30px;
+    color: red;
+    
+}
+#caracteristicas .fea-box h3{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    
+}
+
+#caracteristicas .fea-box p{
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    margin-top: 10px;
+}
+
+#proyectos{
+    background-color:rgb(217, 236, 239);
+    padding: 8vw;
+    text-align: center;
+}
+#proyectos a{
+    text-decoration: none;
+}
+#proyectos h2{
+    color: black;
+    padding: 10px;
+    font-size: 45px;
+}
+#proyectos h3{
+    color: #ffffff;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#proyectos span{
+    font-size: 1.1rem;
+    color: rgb(95, 95, 95);
+    padding: 10px;
+    font-size: 15px;
+}
+
+#proyectos .pro-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+
+#proyectos .pro-box .pro{
+    text-align: start;
+    background-color: black;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#proyectos .pro-box .pro img{
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+}
+
+#competencias{
+    background-color: black;
+    padding: 8vw;
+    text-align: center;
+}
+
+#competencias h2{
+    color: white;
+    font-size: 40px;
+}
+
+#competencias .comp-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+#competencias .comp-box .comp{
+    margin: 20px;
+    padding: 40px;
+    background-color: rgb(117, 113, 113); 
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(172, 100, 100, 0.15);
+
+}
+#competencias .comp-box .comp i{
+    color: yellow;
+    font-size: 15px;
+}
+#competencias .comp-box .comp p{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
