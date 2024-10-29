@@ -23,6 +23,8 @@ nav{
     font-family: "Agency FB";
     
 }
+
+
 nav img{
     width: 50px;
     height: 50px;
@@ -56,39 +58,93 @@ nav ul li a:hover{
     text-decoration: underline;
 }
 
+/* Mostrar menú como una lista vertical en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
 
-#home{
+    nav ul {
+        flex-direction: column;
+        display: none; /* Oculto por defecto en móviles */
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        text-align: left;
+    }
+
+    /* Mostrar el menú al hacer clic (puedes añadir JS para manejar esto) */
+    nav.active ul {
+        display: flex;
+    }
+}
+
+
+/* Estilos para el botón de hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px; /* Ajusta el tamaño según lo necesites */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el botón en pantallas pequeñas */
+    }
+
+    nav ul {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column; /* Alinear verticalmente */
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+        padding: 10px 0; /* Espaciado interno para la lista */
+    }
+
+    nav.active ul {
+        display: flex; /* Mostrar menú al activar */
+    }
+}
+
+
+
+#home {
     background-color: black;
     width: 100%;
-    height: 100vh;
-    padding: 200px 50px;
-    display: flex;
-    flex-direction:row;
+    min-height: 100vh; /* Cambia height por min-height */
     padding: 15vw 8vw;
-    
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; /* Evita el desbordamiento */
+
 }
+
 
 #home .nombre{
     color: red;
     font-size: 20px;
     font-weight: 800;
-
 }
 
 #home h1{
     color: #fff;
     font-size: 100px;
     letter-spacing: 1.5px;
-    font-family: Cooper Black;
+    font-weight: 900;
 }
 
-#home p{
+
+#home p {
     width: 100%;
     color: grey;
     font-size: 1.1rem;
-    line-height: 30px;
-    /*border: 10px wheat solid;*/
+    line-height: 1.5; /* Aumentar el espacio entre líneas */
+    margin-bottom: 20px; /* Agregar margen inferior */
 }
+
 
 #home .boton{
     margin-top: 50px;
@@ -113,26 +169,47 @@ nav ul li a:hover{
 }
 
 #home img{
-    width: 300px;
-    height: 300px;
-    margin-left: 100px;
-    /*border: 10px wheat solid;*/
+    max-width: 100%; /* Esto asegura que la imagen no sobrepase el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    text-align: center;
+}
 
+
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        text-align: center;
+        height: auto; /* Dejar que la altura se ajuste automáticamente */
+        padding: 15vw 4vw;
+    }
+
+    #home img {
+        width: 150px; /* Ajusta el tamaño según necesites */
+        height: 150px;
+        margin: 20px 0; /* Añade margen vertical para separación */
+    }
+
+    #home h1 {
+        font-size: 2.5rem; /* Reduce el tamaño de la fuente */
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
 }
 
 #caracteristicas{
     padding: 5% 8% 0 8%;
     text-align: center;
     background-color: rgb(16, 17, 17);
-    height: 290px;
+    height: auto;
 }
 
 #caracteristicas .fea-base{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
     grid-gap: 1rem;
-    margin-top: 0;
-    
 }
 
 #caracteristicas .fea-base .fea-box{
@@ -160,6 +237,15 @@ nav ul li a:hover{
     color: white;
     margin-top: 10px;
 }
+
+#caracteristicas,
+#proyectos,
+#competencias {
+    padding: 5% 8%; /* Ajusta según sea necesario */
+    margin: 0; /* Asegúrate de que no haya margen extra */
+}
+
+
 
 #proyectos{
     background-color:black;
@@ -243,12 +329,31 @@ nav ul li a:hover{
     font-weight: 700;
 }
 
+@media (max-width: 768px) {
+    #caracteristicas .fea-base,
+    #proyectos .pro-box,
+    #competencias .comp-box {
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos pequeños */
+    }
+}
+@media (max-width: 768px) {
+    #caracteristicas .fea-base,
+    #proyectos .pro-box,
+    #competencias .comp-box {
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos pequeños */
+    }
+}
+
+
 #proyects{
     background-color:rgb(16, 17, 17);
     padding: 8vw;
     text-align: left;
+    
 }
+
 #proyects h2{
+    margin-top: 70px;
     color: rgb(119, 56, 95);
     border-bottom: 3px solid rgb(105, 57, 86);
     font-size: 60px;
@@ -263,7 +368,7 @@ nav ul li a:hover{
 
 #proyects .proy img{
     width: 100%;
-    height: 500px;
+    height: auto;
 }
 
 
@@ -274,8 +379,8 @@ grid-gap: 1rem;
 }
 
 #proyects .proy .proy-imgs img{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -284,6 +389,11 @@ grid-gap: 1rem;
     list-style-type: none;
     text-align: center;
     margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+    #proyects .proy .boton2 {
+        margin-bottom: 50px;
+    }
 }
 
 
@@ -303,6 +413,30 @@ grid-gap: 1rem;
     background-color: rgb(112, 50, 61);
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    #proyects .proy h2 {
+        font-size: 24px;
+    }
+
+    #proyects .proy p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #proyects .proy-imgs img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #proyects .boton2 li a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
 
 #pie{
     width: 100%;
@@ -329,4 +463,23 @@ grid-gap: 1rem;
 #pie img{
     width: 350px;
     height: 250px;
+}
+
+@media (max-width: 768px) {
+    #pie {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    #pie .diseñoPie {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #pie img {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
 }

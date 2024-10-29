@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav> 
-        
+        <div class="menu-toggle">☰</div> <!-- Icono de hamburguesa -->
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="proyecto1.html">PROYECTO 1</a></li>
@@ -18,7 +18,13 @@
             <li><a href="proyecto5.html">PROYECTO 5</a></li>
             <li><a href="proyecto6.html">PROYECTO 6</a></li>
         </ul>
+        </div>
     </nav>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
 
     <section id="proyects">
         <div class="proy">

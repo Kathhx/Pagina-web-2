@@ -6,31 +6,38 @@
     <title>Portafolio Katherine Trujillo</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <nav> 
-        <img src="img/logo.png" alt="">
+    <nav>
+        <img src="img/logo.png" alt="Logo" />
+        <div class="menu-toggle">☰</div> <!-- Icono de hamburguesa -->
         <ul>
             <li><a href="#home">QUIEN SOY</a></li>
             <li><a href="#proyectos">MIS PROYECTOS</a></li>
             <li><a href="#competencias">COMPETENCIAS</a></li>
         </ul>
     </nav>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
 
     <section id="home">
         <div>
-        <p class="nombre">Katherine Trujillo</p>
-        <h1>PORTAFIO</h1>
-        <p>Estudiante de Ingeniería en Sistemas y Ciencias de la Computación, apasionada por la resolución de problemas, en este portafolio se presentan proyectos realizados por mi, programados con distintos lenguajes como Html, Css, Php, C++, Java y podrás descargarlos en el siguiente enlace</p>
-        <ul class="boton">
-            <li>
-                <a href="https://github.com/Kathhx">DESCARGAR PROYECTOS</a>
-            </li>
-        </ul>
+            <p class="nombre">Katherine Trujillo</p>
+            <h1>PORTAFOLIO</h1>
+            <p>Estudiante de Ingeniería en Sistemas y Ciencias de la Computación, apasionada por la resolución de problemas, en este portafolio se presentan proyectos realizados por mi, programados con distintos lenguajes como Html, Css, Php, C++, Java y podrás descargarlos en el siguiente enlace</p>
+            <ul class="boton">
+                <li>
+                    <a href="https://github.com/Kathhx">DESCARGAR PROYECTOS</a>
+                </li>
+            </ul>
         </div>
-        <img src="img/logo.png" alt="">
+        <img src="img/logo.png" alt="Logo">
     </section>
+    
 
     <section id="caracteristicas">
         <div class="fea-base">
@@ -177,5 +184,6 @@
         <img src="img/logo.png" alt="">
     </section>
 
+    
 </body>
 </html>
