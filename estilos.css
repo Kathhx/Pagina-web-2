@@ -303,3 +303,30 @@ grid-gap: 1rem;
     background-color: rgb(112, 50, 61);
     color: #fff;
 }
+
+#pie{
+    width: 100%;
+    height: 40vh;
+    background-color: black;
+    display: flex;
+    flex-direction:row;
+}
+
+#pie .diseñoPie{
+    padding: 70px;
+    width: 60%;
+}
+#pie h4{
+    color: rgb(105, 57, 86);
+    text-decoration:dotted;
+}
+
+#pie p{
+    color: rgb(105, 57, 86);
+    margin-top: 5px;
+}
+
+#pie img{
+    width: 350px;
+    height: 250px;
+}
